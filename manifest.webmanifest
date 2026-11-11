@@ -1,16 +1,14 @@
 {
   "name": "Solat Tracker",
-  "short_name": "Solat Tracker",
+  "short_name": "Solat",
   "description": "Penjejak solat lima waktu yang ringkas dan peribadi.",
-  "lang": "ms",
   "start_url": "./",
-  "scope": "./",
   "display": "standalone",
-  "background_color": "#080b09",
-  "theme_color": "#102319",
+  "background_color": "#ffffff",
+  "theme_color": "#718579",
   "icons": [
     {
-      "src": "./icon.svg",
+      "src": "icon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any maskable"

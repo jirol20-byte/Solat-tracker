@@ -1,37 +1,28 @@
-# Solat Tracker — Clean V1
+# Solat Tracker — Version 1
 
-A minimalist, installable Android-friendly Progressive Web App for tracking five daily prayers.
+A minimalist, installable Android-friendly web app (PWA) for tracking five daily prayers.
 
-## Files
+## Version 1 features
+- Monthly calendar with five prayer slots.
+- Tap a slot to choose: Tunai, Sudah Qadha, Tertinggal, or clear record.
+- Monthly totals for each status.
+- Records persist in the browser on this device using local storage.
+- Offline support after the first successful load.
+- No login, analytics, or cloud sync.
 
-- `index.html` — app structure
-- `styles.css` — minimalist dark green design
-- `app.js` — calendar, status selection, monthly totals, local storage
-- `sw.js` — offline caching
-- `manifest.webmanifest` — PWA install metadata
-- `icon.svg` — app icon
+## Install on Android
+A PWA must be served from an HTTPS website (or localhost for development).
 
-## Publish with GitHub Pages
+1. Publish the contents of this folder to an HTTPS static host (for example, GitHub Pages, Netlify, or your own hosting).
+2. Open the HTTPS address in Chrome on Android.
+3. Open Chrome menu (⋮) and choose **Install app** or **Add to Home screen**.
+4. Launch **Solat Tracker** from your home screen.
 
-1. Upload all files to the repository root (same folder as `index.html`).
-2. Commit the changes to the `main` branch.
-3. In repository Settings → Pages, choose **Deploy from a branch**, branch **main**, folder **/(root)**.
-4. Wait for the GitHub Pages deployment to finish.
-5. Open the published HTTPS URL on Android.
-6. In the browser menu, choose **Install app** or **Add to Home screen**.
-
-## Use
-
-Tap a prayer cell to choose:
-- Tunai dalam waktu
-- Sudah qadha
-- Tertinggal / perlu qadha
-- Kosongkan rekod
-
-Monthly totals update automatically. Records are stored locally in the browser on this device.
+## Local preview
+You can run a local static server from this folder, then open the local address on your computer:
+`python -m http.server 8000`
 
 ## Important
-
-- This app is a personal record-keeping tool, not a religious ruling.
-- Data is stored locally and does not sync between devices.
-- Clearing browser/site storage may erase records.
+- Data is stored only in this browser on this phone. Clearing browser/site data may erase it.
+- This first version does not yet sync across devices, send prayer-time notifications, calculate prayer times, or provide a qadha planner.
+- "Tertinggal" is a manual record, not a religious ruling. The app does not calculate obligations or make fiqh decisions.
