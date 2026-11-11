@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ms">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#718579">
+  <meta name="description" content="Penjejak solat lima waktu yang ringkas dan peribadi.">
+  <title>Solat Tracker</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="topline"><span class="brand-mark">✦</span><span>IBADAH HARIAN</span></div>
+    <h1>Solat Tracker</h1>
+    <p class="subtitle">Satu hari, lima waktu. Teruskan dengan istiqamah.</p>
+    <section class="summary" aria-label="Ringkasan bulan">
+      <div class="metric performed"><strong id="doneCount">0</strong><span>Tunai</span></div>
+      <div class="metric qadha"><strong id="qadhaCount">0</strong><span>Qadha</span></div>
+      <div class="metric missed"><strong id="missedCount">0</strong><span>Tertinggal</span></div>
+    </section>
+  </header>
+
+  <main>
+    <section class="monthbar" aria-label="Pilih bulan">
+      <button id="prevMonth" class="month-arrow" aria-label="Bulan sebelumnya">‹</button>
+      <h2 id="monthLabel">November 2026</h2>
+      <button id="nextMonth" class="month-arrow" aria-label="Bulan seterusnya">›</button>
+    </section>
+    <p class="hint">Tekan kotak waktu untuk merekod status solat.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr>
+          <th class="date-head">Tarikh</th>
+          <th>Subuh</th><th>Zohor</th><th>Asar</th><th>Maghrib</th><th>Isyak</th>
+        </tr></thead>
+        <tbody id="trackerBody"></tbody>
+      </table>
+    </div>
+    <section class="legend">
+      <span><i class="dot dot-done"></i>Tunai</span>
+      <span><i class="dot dot-qadha"></i>Qadha</span>
+      <span><i class="dot dot-missed"></i>Tertinggal</span>
+      <span><i class="dot dot-empty"></i>Belum direkod</span>
+    </section>
+    <p class="privacy">Rekod disimpan pada telefon ini sahaja. Tiada akaun diperlukan.</p>
+  </main>
+
+  <dialog id="statusDialog">
+    <form method="dialog" class="dialog-content">
+      <div class="dialog-grip"></div>
+      <p class="eyebrow" id="selectedDate">PILIH STATUS</p>
+      <h3 id="selectedPrayer">Subuh</h3>
+      <button class="choice choice-done" value="done"><span>✓</span><b>Tunai dalam waktu</b></button>
+      <button class="choice choice-qadha" value="qadha"><span>✓✓</span><b>Sudah qadha</b></button>
+      <button class="choice choice-missed" value="missed"><span>!</span><b>Tertinggal – perlu qadha</b></button>
+      <button class="choice choice-clear" value="clear"><span>×</span><b>Kosongkan rekod</b></button>
+      <button class="cancel" value="cancel">Batal</button>
+    </form>
+  </dialog>
+  <script src="app.js"></script>
+</body>
+</html>
