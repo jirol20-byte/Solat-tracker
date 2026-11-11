@@ -1,4 +1,7 @@
-
+document.body.insertAdjacentHTML(
+  "afterbegin",
+  '<div style="background:red;color:white;padding:15px">JAVASCRIPT BERJALAN</div>'
+);
 const prayers = ["Subuh","Zohor","Asar","Maghrib","Isyak"];
 const keys = ["fajr","dhuhr","asr","maghrib","isha"];
 const storageKey = "solat-tracker-v1";
